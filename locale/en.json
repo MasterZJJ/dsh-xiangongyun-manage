@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "XGC image manager",
+    "description": "Manages 仙宫云 (XGC) GPU instances and private images from the DSH web GUI. Open Settings → 仙宫云镜像, or the 仙宫云 button at the sidebar foot for the full-screen console: browse instances and images, save an image from an instance, deploy an instance from an image, tag and whitelist images, delete them, and see an estimated hourly cost. The access token is stored in the credential store (never in configuration) and the plugin page only ever shows its last four characters. Requests go to api.xiangongyun.com from the Host process; the page talks to the Host over a same-origin route that is local-only unless you turn that off. Destructive actions need the target name typed in. Cost figures are estimates from the prices the API reports, not a bill.",
+    "detail": "docs/DETAIL.md"
+  }
+}

@@ -1,0 +1,26 @@
+# dsh-xiangongyun bundle patch.
+# Inserts one Host plugin row. The access token is NOT configuration: it lives
+# in the credential store under `xiangongyun/access-token` and is written from
+# the plugin page. Everything below is safe to edit in the Settings UI.
+- insert:
+    - id: xiangongyun
+      name: 'dsh-xiangongyun'
+      config:
+        apiBase: https://api.xiangongyun.com
+        refreshSeconds: 30
+        localOnly: true
+        confirmDestructive: true
+        saveImageSendName: false
+        gpuModels:
+          - NVIDIA GeForce RTX 4090
+          - NVIDIA GeForce RTX 4090 48G
+          - NVIDIA GeForce RTX 4090 D
+          - NVIDIA GeForce RTX 4090 D 48G
+        dataCenterId: 1
+        gpuGrabMinutes: 5
+        sidebarRefreshMinutes: 10
+        storagePricePerGbHour: 0.00003
+        balanceWarnBelow: 20
+        longRunningWarnHours: 6
+        staleImageWarnDays: 90
+        workdir: ''

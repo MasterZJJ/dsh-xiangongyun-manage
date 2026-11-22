@@ -1,0 +1,71 @@
+{
+  "name": "dsh-xiangongyun",
+  "version": "0.1.0",
+  "description": "Manage XGC (仙宫云) GPU instances and private images: browse, annotate, save, deploy and delete, with a full-screen console inside the DSH web GUI.",
+  "license": "MIT",
+  "author": "MasterZJJ",
+  "type": "module",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "xiangongyun",
+    "xgc",
+    "gpu",
+    "termux"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "xgc.js",
+    "jobs.js",
+    "store.js",
+    "service.js",
+    "tools.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/jobs.test.mjs && node test/client-apply.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.1.0",
+    "@deepseek-ai/schemastery": "~3.19.0",
+    "@deepseek-ai/dsh-tools": "0.2.2-rc.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MasterZJJ/dsh-xiangongyun-manage.git"
+  },
+  "homepage": "https://github.com/MasterZJJ/dsh-xiangongyun-manage#readme",
+  "bugs": {
+    "url": "https://github.com/MasterZJJ/dsh-xiangongyun-manage/issues"
+  }
+}

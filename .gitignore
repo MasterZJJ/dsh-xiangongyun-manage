@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# 内部资料：不外发。VERIFY.md 记录了真实账号的余额、实例 ID 与镜像名，
+# PLAN.md 是实现前的方案记录，均在本地保留。
+PLAN.md
+docs/VERIFY.md
+
+# 仙宫云官方接口文档副本（第三方内容，不随仓库分发）
+reference/
